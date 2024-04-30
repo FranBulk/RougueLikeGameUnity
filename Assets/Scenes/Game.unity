@@ -4404,6 +4404,8 @@ MonoBehaviour:
   currentMightDisplay: {fileID: 360500212}
   currentProjectileSpeedDisplay: {fileID: 1319883162}
   currentMagnetDisplay: {fileID: 159475013}
+  chosenCharacterImage: {fileID: 0}
+  chosenCharacterName: {fileID: 787854682}
   isGameOver: 0
 --- !u!4 &1577105487
 Transform:

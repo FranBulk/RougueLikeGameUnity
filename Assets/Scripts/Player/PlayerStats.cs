@@ -163,13 +163,15 @@ public class PlayerStats : MonoBehaviour
 
    void Start()
    {
-    experienceCap = levelRanges[0].experienceCapIncrease; //Porque en cuanto empieza el juego sube de nivel el jugador
-    GameManager.instance.currentHealthDisplay.text = "Vida: " + currentHealth;
-    GameManager.instance.currentrecoveryDisplay.text = "Recuperación: " + currentRecovery;
-    GameManager.instance.currentMoveSpeedDisplay.text = "Velocidad de movimiento: " + currentMoveSpeed;
-    GameManager.instance.currentMightDisplay.text = "Poder: " + currentMight;
-    GameManager.instance.currentProjectileSpeedDisplay.text = "Velocidad de Proyectil: " + currentProjectileSpeed;
-    GameManager.instance.currentMagnetDisplay.text = "Imán: " + currentMagnet;
+      experienceCap = levelRanges[0].experienceCapIncrease; //Porque en cuanto empieza el juego sube de nivel el jugador
+      GameManager.instance.currentHealthDisplay.text = "Vida: " + currentHealth;
+      GameManager.instance.currentrecoveryDisplay.text = "Recuperación: " + currentRecovery;
+      GameManager.instance.currentMoveSpeedDisplay.text = "Velocidad de movimiento: " + currentMoveSpeed;
+      GameManager.instance.currentMightDisplay.text = "Poder: " + currentMight;
+      GameManager.instance.currentProjectileSpeedDisplay.text = "Velocidad de Proyectil: " + currentProjectileSpeed;
+      GameManager.instance.currentMagnetDisplay.text = "Imán: " + currentMagnet;
+
+      GameManager.instance.AssignChosenCharacterUI(characterData);
    }
 
    void Update() 

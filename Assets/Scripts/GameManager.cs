@@ -20,19 +20,24 @@ public class GameManager : MonoBehaviour
     public GameState currentState;
     public GameState previousState; //El estado antes del actual, este es para cuestiones de funcionalidad
 
-    [Header("UI")]
+    [Header("Screens")]
     public GameObject pauseScreen;
     public GameObject resultsScreen;
 
     //Las stats que se van a mostrar
 
     //Las stats que estan en el momento
+    [Header("Current Stat Displays")]
     public Text currentHealthDisplay;
     public Text currentrecoveryDisplay;
     public Text currentMoveSpeedDisplay;
     public Text currentMightDisplay;
     public Text currentProjectileSpeedDisplay;
     public Text currentMagnetDisplay;
+
+    [Header("Results Screen Display")]
+    public Image chosenCharacterImage;
+    public Text chosenCharacterName;
 
     public bool isGameOver = false;
 
@@ -132,5 +137,11 @@ public class GameManager : MonoBehaviour
     void DisplayResults()
     {
         resultsScreen.SetActive(true);
+    }
+
+    public void AssignChosenCharacterUI(CharacterScriptableObject chosenCharacterData)
+    {
+        chosenCharacterImage.sprite = chosenCharacterData.Icon;
+        chosenCharacterName.text = chosenCharacterData.name;
     }
 }
