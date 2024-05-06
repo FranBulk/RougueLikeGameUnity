@@ -38,6 +38,10 @@ public class GameManager : MonoBehaviour
     [Header("Results Screen Display")]
     public Image chosenCharacterImage;
     public Text chosenCharacterName;
+    public Text levelReachedDisplay;
+    public List<Image> chosenWeaponsUI = new List<Image>(6);
+    public List<Image> chosenPassiveItemsUI = new List<Image>(6);
+
 
     public bool isGameOver = false;
 
@@ -143,5 +147,45 @@ public class GameManager : MonoBehaviour
     {
         chosenCharacterImage.sprite = chosenCharacterData.Icon;
         chosenCharacterName.text = chosenCharacterData.name;
+    }
+
+    public void AssignLevelReachedUI(int LevelReachedData)
+    {
+        levelReachedDisplay.text = LevelReachedData.ToString();
+    }
+
+    public void AssignChosenWeaponsAndPassiveItemsUI(List<Image> chosenWeaponsData, List<Image> chosenPassiveItemsData)
+    {
+        if (chosenWeaponsData.Count != chosenWeaponsUI.Count || chosenPassiveItemsData.Count != chosenPassiveItemsUI.Count)
+        {
+            Debug.Log("Las listas de armas para mostrar tienen diferentes tamaños");
+            return;
+        }
+
+        for (int i = 0; i < chosenWeaponsUI.Count; i++)
+        {
+            if (chosenWeaponsData[i].sprite)
+            {
+                chosenWeaponsUI[i].enabled = true;
+                chosenWeaponsUI[i].sprite = chosenWeaponsData[i].sprite;
+            }
+            else
+            {
+                chosenWeaponsUI[i].enabled = false;
+            }
+        }
+
+        for (int i = 0; i < chosenPassiveItemsUI.Count; i++)
+        {
+            if (chosenPassiveItemsData[i].sprite)
+            {
+                chosenPassiveItemsUI[i].enabled = true;
+                chosenPassiveItemsUI[i].sprite = chosenPassiveItemsData[i].sprite;
+            }
+            else
+            {
+                chosenPassiveItemsUI[i].enabled = false;
+            }
+        }
     }
 }
