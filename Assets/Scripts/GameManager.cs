@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     {
         Gameplay,
         Paused,
-        GameOver
+        GameOver,
+        LevelUp
     }
 
     //Esta variable almacena el estado del juego en el momento
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Screens")]
     public GameObject pauseScreen;
     public GameObject resultsScreen;
+    public GameObject levelUpScreen;
 
     //Las stats que se van a mostrar
 
@@ -39,11 +41,19 @@ public class GameManager : MonoBehaviour
     public Image chosenCharacterImage;
     public Text chosenCharacterName;
     public Text levelReachedDisplay;
+    public Text timeSurvivedDisplay;
     public List<Image> chosenWeaponsUI = new List<Image>(6);
     public List<Image> chosenPassiveItemsUI = new List<Image>(6);
 
+    [Header("StopWacth")]
+    public float timeLimit;
+    float StopWacthTime;
+    public Text stopWatchDisplay;
+
 
     public bool isGameOver = false;
+
+    public bool choosingUpgrades;
 
     void Awake()
     {
@@ -65,6 +75,7 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Gameplay:
                 CheckForPauseAndResume();
+                UpdateStopWacth();
                 break;
             case GameState.Paused:
                 CheckForPauseAndResume();
@@ -76,6 +87,14 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 0f;
                     Debug.Log("El juego terminó");
                     DisplayResults();
+                }
+                break;
+            case GameState.LevelUp:
+                if(!choosingUpgrades)
+                {
+                    choosingUpgrades = true;
+                    Time.timeScale = 0f;
+                    levelUpScreen.SetActive(true);
                 }
                 break;
             default:
@@ -131,10 +150,12 @@ public class GameManager : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         resultsScreen.SetActive(false);
+        levelUpScreen.SetActive(false);
     }
 
     public void GameOver()
     {
+        timeSurvivedDisplay.text = stopWatchDisplay.text;
         ChangeState(GameState.GameOver);
     }
 
@@ -187,5 +208,38 @@ public class GameManager : MonoBehaviour
                 chosenPassiveItemsUI[i].enabled = false;
             }
         }
+    }
+
+    void UpdateStopWacth()
+    {
+        StopWacthTime += Time.deltaTime;
+
+        UpdateStopWacthDisplay();
+
+        if(StopWacthTime >= timeLimit)
+        {
+            GameOver();
+        }
+    }
+
+    void UpdateStopWacthDisplay()
+    {
+        int minutes = Mathf.FloorToInt(StopWacthTime/60);
+        int seconds = Mathf.FloorToInt(StopWacthTime%60);
+
+        stopWatchDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void StartLeveUp()
+    {
+        ChangeState(GameState.LevelUp);
+    }
+
+    public void EndLevelUp()
+    {
+        choosingUpgrades = false;
+        Time.timeScale = 1f;
+        levelUpScreen.SetActive(false);
+        ChangeState(GameState.Gameplay);
     }
 }
