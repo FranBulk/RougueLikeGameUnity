@@ -19,4 +19,6 @@ MonoBehaviour:
   pierce: 0
   level: 1
   nextLevelPrefab: {fileID: 8795636666019803511, guid: f6614e80179f1644eba2fe5d14b5230a, type: 3}
+  name: Ajo
+  description: "Radio de da\xF1o alrededor"
   icon: {fileID: -946560987, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}

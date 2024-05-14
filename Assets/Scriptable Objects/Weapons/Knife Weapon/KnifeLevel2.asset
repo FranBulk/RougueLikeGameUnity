@@ -16,7 +16,9 @@ MonoBehaviour:
   damage: 10
   speed: 10
   cooldownDuration: 2
-  pierce: 2
+  pierce: 3
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Cuchillo Nvl 2
+  description: Atraviesa a un enemigo mas
   icon: {fileID: -273816172, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}

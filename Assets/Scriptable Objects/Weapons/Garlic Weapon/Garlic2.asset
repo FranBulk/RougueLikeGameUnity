@@ -19,4 +19,6 @@ MonoBehaviour:
   pierce: 0
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Ajo Nvl 2
+  description: "+5 de da\xF1o"
   icon: {fileID: -946560987, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}

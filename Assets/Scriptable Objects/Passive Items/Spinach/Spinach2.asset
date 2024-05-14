@@ -16,3 +16,5 @@ MonoBehaviour:
   level: 2
   nextLevelPrefab: {fileID: 0}
   icon: {fileID: -1035102223, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}
+  name: Espinaca Nvl2
+  description: "Aumenta mas tu da\xF1o"
