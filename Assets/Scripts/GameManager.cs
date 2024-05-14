@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
 
     public bool choosingUpgrades;
 
+    public GameObject playerObject;
+
     void Awake()
     {
         if(instance == null)
@@ -233,6 +235,7 @@ public class GameManager : MonoBehaviour
     public void StartLeveUp()
     {
         ChangeState(GameState.LevelUp);
+        playerObject.SendMessage("RemoveAndApplyUpgrades");
     }
 
     public void EndLevelUp()
