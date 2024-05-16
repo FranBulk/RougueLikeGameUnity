@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -137,6 +138,11 @@ public class PlayerStats : MonoBehaviour
    public int weaponIndex;
    public int passiveItemIndex;
 
+   [Header("UI")]
+   public Image healthBar;
+   public Image expBar;
+   public Text leveltext;
+
    public GameObject secondWeaponTest;
    public GameObject firstPassiveItemTest, secondPassiveItemTest;
 
@@ -172,6 +178,10 @@ public class PlayerStats : MonoBehaviour
       GameManager.instance.currentMagnetDisplay.text = "Imán: " + currentMagnet;
 
       GameManager.instance.AssignChosenCharacterUI(characterData);
+
+      UpdateHealthBar();
+      UpdateExpBar();
+      UpdateLevelText();
    }
 
    void Update() 
@@ -193,6 +203,7 @@ public class PlayerStats : MonoBehaviour
    {
       experience += amount;
       LevelUpChecker();
+      UpdateExpBar();
    }
 
    void LevelUpChecker()
@@ -201,7 +212,7 @@ public class PlayerStats : MonoBehaviour
       {
          level++;
          experience -= experienceCap;
-         int experienceCapIncrease = 0;
+         int experienceCapIncrease   = 0;
          foreach (LevelRange range in levelRanges)
          {
             if(level >= range.startLevel && level <= range.endLevel)
@@ -212,8 +223,20 @@ public class PlayerStats : MonoBehaviour
          }
          experienceCap += experienceCapIncrease;
 
+         UpdateLevelText();
+
          GameManager.instance.StartLeveUp();
       }
+   }
+
+   void UpdateExpBar()
+   {
+      expBar.fillAmount = (float)experience / experienceCap;
+   }
+
+   void UpdateLevelText()
+   {
+      leveltext.text = "NIVEL " + level.ToString();
    }
 
    public void TakeDamage(float dmg)
@@ -228,7 +251,14 @@ public class PlayerStats : MonoBehaviour
          {
             Kill();
          }
+
+         UpdateHealthBar();
       }
+   }
+
+   void UpdateHealthBar()
+   {
+      healthBar.fillAmount = currentHealth / characterData.MaxHealth; //Se llama esta función que hicimos en start y take damage
    }
 
    public void Kill()

@@ -151,6 +151,8 @@ public class InventoryManager : MonoBehaviour
 
                 if(chosenweaponUpgrade != null)
                 {
+                    EnableUpgradeUI(upgradeOptions);
+
                     bool newWeapon = false;
                     for (int i = 0; i < weaponSlots.Count; i++)
                     {
@@ -161,6 +163,7 @@ public class InventoryManager : MonoBehaviour
                             {
                                 if(!chosenweaponUpgrade.weapondData.NextLevelPrefab)
                                 {
+                                    DisableUpgradeUI(upgradeOptions);
                                     break;
                                 }
                                 upgradeOptions.upgradeButton.onClick.AddListener(() => LevelUpWeapon(i, chosenweaponUpgrade.weapondUpgradeIndex));
@@ -192,6 +195,8 @@ public class InventoryManager : MonoBehaviour
 
                 if (chosenPassiveItemUpgrade != null)
                 {
+                    EnableUpgradeUI(upgradeOptions);
+
                     bool newPassiveItem = false;
                     for (int i = 0; i < passiveItemSlots.Count; i++)
                     {
@@ -203,6 +208,7 @@ public class InventoryManager : MonoBehaviour
                             {
                                 if(!chosenPassiveItemUpgrade.passiveItemData.NextLevelPrefab)
                                 {
+                                    DisableUpgradeUI(upgradeOptions);
                                     break;
                                 }
                                 upgradeOptions.upgradeButton.onClick.AddListener(() => LevelUpPassiveItem(i, chosenPassiveItemUpgrade.passiveItemUpgradeIndex));
@@ -231,9 +237,10 @@ public class InventoryManager : MonoBehaviour
 
     void RemoveUpgradesOptions()
     {
-        foreach (var upgradeOption in upgradeUIOptions)
+        foreach (var upgradesOption in upgradeUIOptions)
         {
-            upgradeOption.upgradeButton.onClick.RemoveAllListeners();
+            upgradesOption.upgradeButton.onClick.RemoveAllListeners();
+            DisableUpgradeUI(upgradesOption);
         }
     }
 
@@ -241,5 +248,15 @@ public class InventoryManager : MonoBehaviour
     {
         RemoveUpgradesOptions();
         ApplyUpgradeOptions();
+    }
+
+    void DisableUpgradeUI(UpgradeUI ui)
+    {
+        ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(false);
+    }
+
+    void EnableUpgradeUI(UpgradeUI ui)
+    {
+        ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(true);
     }
 }
