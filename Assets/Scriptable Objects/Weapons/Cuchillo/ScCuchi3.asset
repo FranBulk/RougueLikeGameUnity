@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ef22dcb00a6c244396fe4e58616a7f3, type: 3}
-  m_Name: ScCampo3
+  m_Name: ScCuchi3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2218527364724969512, guid: ee3153973f248d740936cbfec32fa6cd, type: 3}
+  prefab: {fileID: 2379818294255872323, guid: 3a01ef8d4582e534797149b79910f34d, type: 3}
   damage: 10
-  speed: 0
-  cooldownDuration: 2.5
-  pierce: 0
+  speed: 10
+  cooldownDuration: 2
+  pierce: 2
   level: 3
-  nextLevelPrefab: {fileID: 8795636666019803511, guid: 7884f01de1564a3439a6dd750457c9cc, type: 3}
-  name: Campo de Poder Nvl 3
-  description: Baja cooldown un 0.5%
-  icon: {fileID: 21300000, guid: 627ba2b0389133044b7997e3d7a6915d, type: 3}
+  nextLevelPrefab: {fileID: 0}
+  name: Cuchillo Nvl 3
+  description: Lanza un cuchillo mas
+  icon: {fileID: -273816172, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}

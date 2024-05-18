@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4464193771934629397}
   - component: {fileID: 5625480693681834820}
   m_Layer: 0
-  m_Name: Knife Weapon
+  m_Name: NConCuchi2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b210e475f3c8fb44be9815ba1debcc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 45fcfbb4741dc1e4d94f6310a3fe964a, type: 2}
+  weaponData: {fileID: 11400000, guid: 7a474e027668fa14082d6c87a21713dd, type: 2}
   destroyAfterSeconds: 3
 --- !u!60 &4464193771934629397
 PolygonCollider2D:
