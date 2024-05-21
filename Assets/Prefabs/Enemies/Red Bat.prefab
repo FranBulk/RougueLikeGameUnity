@@ -164,6 +164,8 @@ MonoBehaviour:
   currentMovespeed: 0
   currentHealth: 0
   currentDamage: 0
+  despawnDistance: 20
+  hitmarket: {fileID: 8300000, guid: c30d44a4d0d874a41ab722912879bee3, type: 3}
 --- !u!114 &6345442482340705907
 MonoBehaviour:
   m_ObjectHideFlags: 0

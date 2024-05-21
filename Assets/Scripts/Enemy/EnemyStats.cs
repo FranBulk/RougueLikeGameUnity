@@ -14,6 +14,7 @@ public class EnemyStats : MonoBehaviour
     public float currentDamage;
 
     public float despawnDistance = 20f;
+    public AudioClip hitmarket;
     Transform player;
     void Awake()
     {
@@ -36,6 +37,7 @@ public class EnemyStats : MonoBehaviour
     }
     public void TakeDamage(float dmg)
     {
+        SoundController.Instance.PlaySound(hitmarket);
         currentHealth -= dmg;
         if (currentHealth <=0)
         {

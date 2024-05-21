@@ -142,9 +142,9 @@ public class PlayerStats : MonoBehaviour
    public Image healthBar;
    public Image expBar;
    public Text leveltext;
-
    public GameObject secondWeaponTest;
    public GameObject firstPassiveItemTest, secondPassiveItemTest;
+   public AudioClip hitmarket;
 
    void Awake()
    {
@@ -244,6 +244,7 @@ public class PlayerStats : MonoBehaviour
       //Los segundos de invencibilidad
       if(!isInvincible)
       {
+         SoundController.Instance.PlaySound(hitmarket);
          CurrentHealth -= dmg;
          invincibilityTimer = invincibilityDuration;
          isInvincible = true;

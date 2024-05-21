@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemiesAllowed; //Numero máximo de enemigos permitidos
     public bool maxEnemiesReached = false; //Si ya llegó al numero máximo de enemigos
     public float waveInterval; //El intervalo entre cada oleada
+    bool isWaveActive = false;
 
     [Header("Spawn Positions")]
     public List<Transform> relativeSpawnpoints; //Una lista para ver todos los spawn points de nuestro mapa
@@ -47,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
 
-        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0) //Checa si la oleada ya terminó
+        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0 && !isWaveActive) //Checa si la oleada ya terminó
         {
             StartCoroutine(BeginNextWave());
         }
@@ -63,10 +64,12 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
+        isWaveActive = true;
         yield return new WaitForSeconds(waveInterval);
 
         if(currentWaveCount < waves.Count-1)
         {
+            isWaveActive = false;
             currentWaveCount++;
             CalculateWaveQuota();
         }
@@ -95,25 +98,21 @@ public class EnemySpawner : MonoBehaviour
                 //Valida si ya se spawneó la mínima cantidad de enemigos de cada tipo
                 if(enemyGroup.spawnCount < enemyGroup.enemyCount)
                 {
-                    //Así limitamos el número máximo
-                    if(enemiesAlive >= maxEnemiesAllowed)
-                    {
-                        maxEnemiesReached = true;
-                        return;
-                    }
                     //Spawnear los enemigos en los spawnpoints del mapa, de manera aleatoria
                     Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnpoints[Random.Range(0, relativeSpawnpoints.Count)].position, Quaternion.identity);
 
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemiesAlive++;
+
+                    //Así limitamos el número máximo
+                    if(enemiesAlive >= maxEnemiesAllowed)
+                    {
+                        maxEnemiesReached = true;
+                        return;
+                    }
                 }
             }
-        }
-        //Reseteamos la variable de la cantidad máxima de enemigos
-        if(enemiesAlive < maxEnemiesAllowed)
-        {
-            maxEnemiesReached = false;
         }
     }
 
@@ -121,5 +120,10 @@ public class EnemySpawner : MonoBehaviour
     {
         //Si un enemigo fué asesinado
         enemiesAlive--;
+          //Reseteamos la variable de la cantidad máxima de enemigos
+        if(enemiesAlive < maxEnemiesAllowed)
+        {
+            maxEnemiesReached = false;
+        }
     }
 }
