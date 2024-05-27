@@ -17,3 +17,4 @@ public class KnifeController : WeaponController //Así accede a nuestra función
         spawnedKnife.GetComponent<KnifeBehavior>().DirectionChecker(pm.lastMovedVector); //Aquí ya se tomó la dirección del player
     }
 }
+//Al rato lo quito

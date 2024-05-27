@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ef22dcb00a6c244396fe4e58616a7f3, type: 3}
-  m_Name: ScCuchi2
+  m_Name: ScCuchi5
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2379818294255872323, guid: 362f9c63b6b78cd4bb92035f0e2f8d89, type: 3}
-  damage: 10
+  prefab: {fileID: 2379818294255872323, guid: 0cf1a8af059b900439777d5ea8527b56, type: 3}
+  damage: 20
   speed: 10
   cooldownDuration: 2
-  pierce: 2
-  repeat: 1
-  level: 2
-  nextLevelPrefab: {fileID: 5792691239935856730, guid: dbf820e27d4aee546bdc86df7cf0278c, type: 3}
-  name: Cuchillo Nvl 2
-  description: "+100% de da\xF1o y +1 enemigo atravesado"
+  pierce: 3
+  repeat: 3
+  cooldownBetween: 0.5
+  level: 5
+  nextLevelPrefab: {fileID: 5792691239935856730, guid: 588f8b162fc3df54d997c5762987ea6e, type: 3}
+  name: Cuchillo Nvl 5
+  description: Lanza un cuchillo mas
   icon: {fileID: -273816172, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}

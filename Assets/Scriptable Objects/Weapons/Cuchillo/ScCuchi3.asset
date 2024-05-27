@@ -17,8 +17,10 @@ MonoBehaviour:
   speed: 10
   cooldownDuration: 2
   pierce: 2
+  repeat: 2
+  cooldownBetween: 0.5
   level: 3
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 5792691239935856730, guid: 13c4bbb20cd23c64fb1d7182fd92e56e, type: 3}
   name: Cuchillo Nvl 3
   description: Lanza un cuchillo mas
   icon: {fileID: -273816172, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}

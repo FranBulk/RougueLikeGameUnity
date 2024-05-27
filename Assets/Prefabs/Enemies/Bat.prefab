@@ -181,4 +181,4 @@ MonoBehaviour:
   drops:
   - name: Blue Gem
     itemPrefab: {fileID: 657756128649219930, guid: b940d48185b05834199c36ce91013de4, type: 3}
-    dropRate: 50
+    dropRate: 100

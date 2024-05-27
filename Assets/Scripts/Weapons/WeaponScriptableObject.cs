@@ -21,7 +21,12 @@ public class WeaponScriptableObject : ScriptableObject //Esto es una función ya
     [SerializeField]
     int pierce; //Cuantas veces puede el arma golpear los enemigos
     public int Pierce {get => pierce; private set => pierce = value;}
-
+    [SerializeField]
+    int repeat; //Cuantas veces puede repetirse el arma
+    public int Repeat {get => repeat; private set => repeat = value;}
+    [SerializeField]
+    float cooldownBetween;
+    public float CooldownBetween {get => cooldownBetween; private set => cooldownBetween = value;}
     [SerializeField]
     int level;
     public int Level {get => level; private set => level = value;}
