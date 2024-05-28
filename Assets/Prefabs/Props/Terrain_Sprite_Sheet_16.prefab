@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  breakSound: {fileID: 8300000, guid: 93306aa65b4fb2a4081470ddb95a6315, type: 3}
+  hitMarket: {fileID: 8300000, guid: c30d44a4d0d874a41ab722912879bee3, type: 3}
 --- !u!114 &8948515382866892986
 MonoBehaviour:
   m_ObjectHideFlags: 0

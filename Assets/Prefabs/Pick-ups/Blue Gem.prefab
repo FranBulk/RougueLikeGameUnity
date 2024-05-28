@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experienceGranted: 100
+  pickupSound: {fileID: 8300000, guid: 822f5f8c087f0d3469ddede69dee8244, type: 3}
 --- !u!50 &2803078391797056960
 Rigidbody2D:
   serializedVersion: 4

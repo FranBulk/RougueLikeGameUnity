@@ -4767,7 +4767,7 @@ MonoBehaviour:
   secondWeaponTest: {fileID: 8795636666019803511, guid: bae45a0db2196704ab272e45bc5b3b04, type: 3}
   firstPassiveItemTest: {fileID: 4097394317779665047, guid: 9412250bb471b1f48b1f13bd4fa50986, type: 3}
   secondPassiveItemTest: {fileID: 7743012907721878287, guid: d53f5d83859b3f64c8a44d4924ba2448, type: 3}
-  hitmarket: {fileID: 8300000, guid: c30d44a4d0d874a41ab722912879bee3, type: 3}
+  hitmarket: {fileID: 8300000, guid: 2a69081b684e6704292f1de5db2982e3, type: 3}
 --- !u!114 &922770703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8294,7 +8294,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.709
   m_Pitch: 1
   Loop: 0
   Mute: 0
