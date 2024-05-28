@@ -142,8 +142,8 @@ public class PlayerStats : MonoBehaviour
    public Image healthBar;
    public Image expBar;
    public Text leveltext;
-   public GameObject secondWeaponTest;
-   public GameObject firstPassiveItemTest, secondPassiveItemTest;
+   //public GameObject secondWeaponTest;
+   //public GameObject firstPassiveItemTest, secondPassiveItemTest;
    public AudioClip hitmarket;
 
    void Awake()
@@ -163,7 +163,7 @@ public class PlayerStats : MonoBehaviour
       //Spawnear el arma principal
       SpawnWeapon(characterData.Startingweapon);
       //SpawnWeapon(secondWeaponTest);
-      SpawnPassiveItem(firstPassiveItemTest);
+      //SpawnPassiveItem(firstPassiveItemTest);
       //SpawnPassiveItem(secondPassiveItemTest);
    }
 
