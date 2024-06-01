@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
 
         if(StopWacthTime >= timeLimit)
         {
-            GameOver();
+            playerObject.SendMessage("Kill");
         }
     }
 

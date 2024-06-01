@@ -11,8 +11,7 @@ public class WeaponController : MonoBehaviour
     int timesrepeat;
 
     protected PlayerMovement pm;
-
-
+    
     // Start is called before the first frame update
     protected virtual void Start() //Virtual es para que cada hijo pueda acceder a las funciones de papa, como esto es la función principal, las armas accederán a ellas
     {
