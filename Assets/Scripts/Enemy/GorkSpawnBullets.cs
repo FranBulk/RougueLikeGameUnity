@@ -10,6 +10,7 @@ public class GorkSpawnBullets : MonoBehaviour
     public GameObject bullet;
     public float bulletlife = 1f;
     public float speed = 1f;
+    public AudioClip bulletSound;
 
     [Header("Spawner Attributes")]
     [SerializeField] private SpawnerType spawnerType;
@@ -32,6 +33,7 @@ public class GorkSpawnBullets : MonoBehaviour
     {
         if(bullet)
         {
+            SoundController.Instance.PlaySound(bulletSound);
             spawnedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
             spawnedBullet.GetComponent<GorkBullet>().speed = speed;
             spawnedBullet.GetComponent<GorkBullet>().bulletlife = bulletlife;

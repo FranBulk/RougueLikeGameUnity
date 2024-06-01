@@ -187,9 +187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CooldownGork: 5
-  maxCooldown: 0
+  timeUntilGorkShoot: 10
   bulletSpawner: {fileID: 1110279085366535973}
-  Gorkispaused: 0
+  BulletSpawnSound: {fileID: 8300000, guid: 96bb1d743b9a57a4d8e4db98276b026f, type: 3}
 --- !u!1 &1110279085366535973
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,5 +237,6 @@ MonoBehaviour:
   bullet: {fileID: 8305841273519597522, guid: d0c9cd73b87764c468af3a57cdf482bd, type: 3}
   bulletlife: 2
   speed: 15
+  bulletSound: {fileID: 8300000, guid: c0e7b8f19e934a0469efc1352ccf51bf, type: 3}
   spawnerType: 1
-  firingRate: 0.1
+  firingRate: 0.25

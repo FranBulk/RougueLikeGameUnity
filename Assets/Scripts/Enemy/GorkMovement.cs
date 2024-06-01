@@ -8,6 +8,7 @@ public class GorkMovement : MonoBehaviour
     Transform player; //Es el jugador
     float movementx;
     public float CooldownGork;
+    public float timeUntilGorkShoot;
     float maxCooldown;
     public GameObject bulletSpawner;
     bool Gorkispaused = false;
@@ -26,9 +27,8 @@ public class GorkMovement : MonoBehaviour
         CooldownGork += Time.deltaTime;
         if (!Gorkispaused)
         {
-            if(CooldownGork >= 2f)
+            if(CooldownGork >= timeUntilGorkShoot)
             {
-                SoundController.Instance.PlaySound(BulletSpawnSound);
                 Gorkispaused = true;
             }
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMovespeed * Time.deltaTime); //Es un movimiento constante hacia el jugador, accediendo con el tiempo real
@@ -45,7 +45,7 @@ public class GorkMovement : MonoBehaviour
         else if (Gorkispaused)
         {
             SpawnBulletSpawner();
-            if (CooldownGork >= maxCooldown+2f)
+            if (CooldownGork >= maxCooldown+timeUntilGorkShoot)
             {
                 Gorkispaused = false;
                 CooldownGork = 0;
