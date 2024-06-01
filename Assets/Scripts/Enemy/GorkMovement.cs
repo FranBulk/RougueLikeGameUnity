@@ -11,32 +11,26 @@ public class GorkMovement : MonoBehaviour
     float maxCooldown;
     public GameObject bulletSpawner;
     bool Gorkispaused = false;
+    public AudioClip BulletSpawnSound;
 
     void Start()
     {
         enemy = GetComponent<EnemyStats>();
         player = FindObjectOfType<PlayerMovement>().transform;
-        CooldownGork = maxCooldown;
+        maxCooldown = CooldownGork;
         CooldownGork = 0f;
         bulletSpawner.SetActive(false);
     }
-
-    // Update is called once per frame
     void Update()
     {
         CooldownGork += Time.deltaTime;
-        if(CooldownGork >= 2)
+        if (!Gorkispaused)
         {
-            Gorkispaused = false;
-        }
-        if (CooldownGork == maxCooldown)
-        {
-            SpawnBulletSpawner();
-            Gorkispaused = true;
-            CooldownGork = 0f;
-        }
-        else if (!Gorkispaused)
-        {
+            if(CooldownGork >= 2f)
+            {
+                SoundController.Instance.PlaySound(BulletSpawnSound);
+                Gorkispaused = true;
+            }
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMovespeed * Time.deltaTime); //Es un movimiento constante hacia el jugador, accediendo con el tiempo real
             Vector2 direction = player.position - transform.position;
             if (direction.x > 0 && transform.localScale.x < 0)
@@ -46,6 +40,16 @@ public class GorkMovement : MonoBehaviour
             else if (direction.x < 0 && transform.localScale.x > 0)
             {
                 Flip();
+            }
+        }
+        else if (Gorkispaused)
+        {
+            SpawnBulletSpawner();
+            if (CooldownGork >= maxCooldown+2f)
+            {
+                Gorkispaused = false;
+                CooldownGork = 0;
+                bulletSpawner.SetActive(false);
             }
         }
     }

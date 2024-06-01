@@ -2873,7 +2873,6 @@ MonoBehaviour:
   - {fileID: 6782779284044717005, guid: 63d71d17b4914a742bec84d24e3cab2f, type: 3}
   player: {fileID: 922770694}
   checkerRadius: 1
-  noTerrainPosition: {x: 0, y: 0, z: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 64

@@ -187,7 +187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CooldownGork: 5
+  maxCooldown: 0
   bulletSpawner: {fileID: 1110279085366535973}
+  Gorkispaused: 0
 --- !u!1 &1110279085366535973
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8305841273519597522, guid: d0c9cd73b87764c468af3a57cdf482bd, type: 3}
-  bulletlife: 10
+  bulletlife: 2
   speed: 15
   spawnerType: 1
-  firingRate: 0.3
+  firingRate: 0.1
