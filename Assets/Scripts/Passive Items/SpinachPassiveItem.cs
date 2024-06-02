@@ -8,4 +8,5 @@ public class SpinachPassiveItem : PassiveItem
     {
         player.CurrentMight *= 1 + passiveItemData.Multiplier / 100f;
     }
+    //Guardalo
 }

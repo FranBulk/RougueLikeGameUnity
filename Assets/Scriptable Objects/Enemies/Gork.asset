@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0869eb40e0ec4faf8bbfb5cf21c37, type: 3}
   m_Name: Gork
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  maxhealth: 300
+  moveSpeed: 1.5
+  maxhealth: 400
   damage: 75

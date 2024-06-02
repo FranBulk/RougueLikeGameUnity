@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RedBat
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  maxhealth: 9
+  maxhealth: 12
   damage: 60

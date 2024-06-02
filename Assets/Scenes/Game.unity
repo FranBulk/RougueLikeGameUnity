@@ -4417,7 +4417,7 @@ MonoBehaviour:
     enemyGroups:
     - enemyName: Bats
       enemyCount: 20
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: 6bd2bce7d3d23f542bd2490a125d3d91, type: 3}
     waveQuota: 0
     spawnInterval: 1
@@ -4426,11 +4426,11 @@ MonoBehaviour:
     enemyGroups:
     - enemyName: Bats
       enemyCount: 20
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: 6bd2bce7d3d23f542bd2490a125d3d91, type: 3}
     - enemyName: Red Bats
       enemyCount: 10
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: c883236fd059c4a45b8d8dd534895fec, type: 3}
     waveQuota: 0
     spawnInterval: 2
@@ -4439,104 +4439,95 @@ MonoBehaviour:
     enemyGroups:
     - enemyName: Red Bats
       enemyCount: 30
-      spawnCount: 10
+      spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: c883236fd059c4a45b8d8dd534895fec, type: 3}
     waveQuota: 0
-    spawnInterval: 2
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Red Bats and Ducks
     enemyGroups:
     - enemyName: Red Bats
       enemyCount: 15
-      spawnCount: 10
+      spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: c883236fd059c4a45b8d8dd534895fec, type: 3}
     - enemyName: Ducks
       enemyCount: 15
-      spawnCount: 10
+      spawnCount: 0
       enemyPrefab: {fileID: 7039319554487549632, guid: 8c98da5a27cca0040a314b2130d6be09, type: 3}
     waveQuota: 0
-    spawnInterval: 2
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Ducks
     enemyGroups:
     - enemyName: Ducks
       enemyCount: 30
-      spawnCount: 10
+      spawnCount: 0
       enemyPrefab: {fileID: 7039319554487549632, guid: 8c98da5a27cca0040a314b2130d6be09, type: 3}
     waveQuota: 0
-    spawnInterval: 3
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Ducks and Deer
     enemyGroups:
     - enemyName: Ducks
       enemyCount: 30
-      spawnCount: 10
+      spawnCount: 0
       enemyPrefab: {fileID: 7039319554487549632, guid: 8c98da5a27cca0040a314b2130d6be09, type: 3}
     - enemyName: Deer
       enemyCount: 10
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 1518497730083706323, guid: 9f180ffdd33eaa14ea7ee40264adbf9a, type: 3}
     waveQuota: 0
-    spawnInterval: 3
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Deer
     enemyGroups:
     - enemyName: Deer
       enemyCount: 12
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 1518497730083706323, guid: 9f180ffdd33eaa14ea7ee40264adbf9a, type: 3}
     waveQuota: 0
-    spawnInterval: 3
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Deer and Wolf
     enemyGroups:
     - enemyName: Deer
       enemyCount: 12
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 1518497730083706323, guid: 9f180ffdd33eaa14ea7ee40264adbf9a, type: 3}
     - enemyName: Wolf
       enemyCount: 12
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 5019450841400592618, guid: 07408156326c364469153704be669e4e, type: 3}
     waveQuota: 0
-    spawnInterval: 4
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Wolf
     enemyGroups:
     - enemyName: Wolf
       enemyCount: 12
-      spawnCount: 5
+      spawnCount: 0
       enemyPrefab: {fileID: 5019450841400592618, guid: 07408156326c364469153704be669e4e, type: 3}
     waveQuota: 0
-    spawnInterval: 4
+    spawnInterval: 1
     spawnCount: 0
-  - waveName: Mini Gorks
+  - waveName: Gork and Mini Gorks
     enemyGroups:
-    - enemyName: Mini Gorks
-      enemyCount: 50
-      spawnCount: 5
-      enemyPrefab: {fileID: 776578470477751794, guid: da296afcf3118414ab74958a482e1eaa, type: 3}
-    waveQuota: 0
-    spawnInterval: 4
-    spawnCount: 0
-  - waveName: Mini Gorks and Gork
-    enemyGroups:
-    - enemyName: Mini Gorks
-      enemyCount: 50
-      spawnCount: 5
-      enemyPrefab: {fileID: 776578470477751794, guid: da296afcf3118414ab74958a482e1eaa, type: 3}
     - enemyName: Gork
       enemyCount: 1
-      spawnCount: 1
+      spawnCount: 0
       enemyPrefab: {fileID: 948939297124740260, guid: 7720e07393f36324fb188de1d89911f1, type: 3}
+    - enemyName: Mini Gorks
+      enemyCount: 100
+      spawnCount: 0
+      enemyPrefab: {fileID: 776578470477751794, guid: da296afcf3118414ab74958a482e1eaa, type: 3}
     waveQuota: 0
-    spawnInterval: 4
+    spawnInterval: 0.25
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 10
+  maxEnemiesAllowed: 12
   maxEnemiesReached: 0
-  waveInterval: 11
+  waveInterval: 10
   relativeSpawnpoints:
   - {fileID: 631657157}
   - {fileID: 791900507}

@@ -52,6 +52,7 @@ public class GorkStats : MonoBehaviour
     public void Kill()
     {
         Destroy(gameObject);
+        GameManager.instance.GameOver();
     }
 
     private void OnCollisionStay2D(Collision2D col) 

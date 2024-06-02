@@ -18,4 +18,5 @@ public class PassiveItem : MonoBehaviour
         player = FindObjectOfType<PlayerStats>();
         ApplyModifier();
     }
+    //Guardalo
 }
