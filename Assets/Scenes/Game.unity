@@ -8703,7 +8703,7 @@ GameObject:
   - component: {fileID: 1740349954}
   m_Layer: 0
   m_Name: Collector
-  m_TagString: Untagged
+  m_TagString: Collector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8751,7 +8751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b5e9dbfd908014b8e7d0054b3e11d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pullSpeed: 250
+  pullSpeed: 500
 --- !u!1 &1746176980
 GameObject:
   m_ObjectHideFlags: 0
