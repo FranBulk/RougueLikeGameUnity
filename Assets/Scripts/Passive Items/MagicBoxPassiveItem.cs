@@ -6,6 +6,6 @@ public class MagicBoxPassiveItem : PassiveItem
 {
     protected override void ApplyModifier()
     {
-        player.CurrentHealth = 1 + passiveItemData.Multiplier / 100f;
+        player.CurrentHealth *= 1 + passiveItemData.Multiplier / 100f;
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ScCampo3
   m_EditorClassIdentifier: 
   prefab: {fileID: 2218527364724969512, guid: ee3153973f248d740936cbfec32fa6cd, type: 3}
-  damage: 10
+  damage: 6
   speed: 0
   cooldownDuration: 0.5
   pierce: 0
