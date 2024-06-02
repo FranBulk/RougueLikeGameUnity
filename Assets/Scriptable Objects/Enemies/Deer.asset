@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Deer
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  maxhealth: 100
+  maxhealth: 150
   damage: 30

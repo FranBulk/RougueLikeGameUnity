@@ -18,6 +18,9 @@ public class EnemyStats : MonoBehaviour
     public AudioClip hitmarket;
     Transform player;
     public Image healthBar;
+    public bool IsGork;
+    PlayerStats playerStats;
+    InventoryManager inventory;
     void Awake()
     {
         currentMovespeed = enemyData.MoveSpeed;
@@ -39,15 +42,49 @@ public class EnemyStats : MonoBehaviour
         UpdateHealthBar();
     }
     public void TakeDamage(float dmg)
+{
+    SoundController.Instance.PlaySound(hitmarket);
+    currentHealth -= dmg;
+    Debug.Log("Damage taken: " + dmg);
+    Debug.Log("Current health: " + currentHealth);
+
+    if (currentHealth <= 0)
     {
-        SoundController.Instance.PlaySound(hitmarket);
-        currentHealth -= dmg;
-        if (currentHealth <=0)
-        {
-            Kill();
-        }
+        HandleDeath();
+    }
+    else
+    {
         UpdateHealthBar();
     }
+}
+
+private void HandleDeath()
+{
+    if (IsGork)
+    {
+        Debug.Log("Is Gork");
+
+        if (!GameManager.instance.isGameOver)
+        {
+            Debug.Log("Game is not over yet");
+
+            Kill();
+            GameManager.instance.AssignLevelReachedUI(playerStats.level);
+            GameManager.instance.AssignChosenWeaponsAndPassiveItemsUI(inventory.weaponUISlots, inventory.passiveItemUISlots);
+            GameManager.instance.GameOver();
+            Debug.Log("GameOver called");
+        }
+        else
+        {
+            Debug.Log("Game is already over");
+        }
+    }
+    else
+    {
+        Debug.Log("Is not Gork");
+        Kill();
+    }
+}
     public void Kill()
     {
         Destroy(gameObject);

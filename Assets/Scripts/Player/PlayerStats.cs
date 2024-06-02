@@ -299,6 +299,7 @@ public class PlayerStats : MonoBehaviour
             CurrentHealth = characterData.MaxHealth;
          }
       }
+      //Guardalo
    }
 
    public void SpawnWeapon(GameObject weapon)

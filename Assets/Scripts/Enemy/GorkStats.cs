@@ -14,6 +14,8 @@ public class GorkStats : MonoBehaviour
     [HideInInspector]
     public float currentDamage;
 
+    PlayerStats playerStats;
+
     public float despawnDistance = 20f;
     public AudioClip hitmarket;
     public Image healthBar;
@@ -44,15 +46,16 @@ public class GorkStats : MonoBehaviour
         currentHealth -= dmg;
         if (currentHealth <=0)
         {
-            Kill();
+            KillGork();
         }
 
         UpdateHealthBar();
     }
-    public void Kill()
+    public void KillGork()
     {
-        Destroy(gameObject);
+        playerStats.Kill();
         GameManager.instance.GameOver();
+        Destroy(gameObject);
     }
 
     private void OnCollisionStay2D(Collision2D col) 

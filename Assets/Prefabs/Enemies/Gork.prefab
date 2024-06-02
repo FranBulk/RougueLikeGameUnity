@@ -192,6 +192,7 @@ MonoBehaviour:
   despawnDistance: 20
   hitmarket: {fileID: 8300000, guid: c30d44a4d0d874a41ab722912879bee3, type: 3}
   healthBar: {fileID: 7420551231475400596}
+  IsGork: 1
 --- !u!1 &1110279085366535973
 GameObject:
   m_ObjectHideFlags: 0
