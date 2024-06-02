@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wolf
   m_EditorClassIdentifier: 
   moveSpeed: 3.5
-  maxhealth: 40
+  maxhealth: 50
   damage: 32

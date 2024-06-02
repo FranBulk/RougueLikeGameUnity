@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Duck
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  maxhealth: 10
+  maxhealth: 20
   damage: 40

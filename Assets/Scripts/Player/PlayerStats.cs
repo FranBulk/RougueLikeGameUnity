@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 //Para no perderlo
 
 public class PlayerStats : MonoBehaviour
@@ -142,7 +143,7 @@ public class PlayerStats : MonoBehaviour
    [Header("UI")]
    public Image healthBar;
    public Image expBar;
-   public Text leveltext;
+   public TMP_Text leveltext;
    //public GameObject secondWeaponTest;
    //public GameObject firstPassiveItemTest, secondPassiveItemTest;
    public AudioClip hitmarket;

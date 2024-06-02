@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -30,25 +29,25 @@ public class GameManager : MonoBehaviour
 
     //Las stats que estan en el momento
     [Header("Current Stat Displays")]
-    public Text currentHealthDisplay;
-    public Text currentrecoveryDisplay;
-    public Text currentMoveSpeedDisplay;
-    public Text currentMightDisplay;
-    public Text currentProjectileSpeedDisplay;
-    public Text currentMagnetDisplay;
+    public TMP_Text currentHealthDisplay;
+    public TMP_Text currentrecoveryDisplay;
+    public TMP_Text currentMoveSpeedDisplay;
+    public TMP_Text currentMightDisplay;
+    public TMP_Text currentProjectileSpeedDisplay;
+    public TMP_Text currentMagnetDisplay;
 
     [Header("Results Screen Display")]
     public Image chosenCharacterImage;
-    public Text chosenCharacterName;
-    public Text levelReachedDisplay;
-    public Text timeSurvivedDisplay;
+    public TMP_Text chosenCharacterName;
+    public TMP_Text levelReachedDisplay;
+    public TMP_Text timeSurvivedDisplay;
     public List<Image> chosenWeaponsUI = new List<Image>(6);
     public List<Image> chosenPassiveItemsUI = new List<Image>(6);
 
     [Header("StopWacth")]
     public float timeLimit;
     float StopWacthTime;
-    public Text stopWatchDisplay;
+    public TMP_Text stopWatchDisplay;
 
 
     public bool isGameOver = false;

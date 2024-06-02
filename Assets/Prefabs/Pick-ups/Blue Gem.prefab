@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6842329851522018976}
   - component: {fileID: 2177347529393691087}
   - component: {fileID: 2803078391797056960}
+  - component: {fileID: -2980047039785465477}
   m_Layer: 0
   m_Name: Blue Gem
   m_TagString: Untagged
@@ -138,3 +139,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2980047039785465477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657756128649219930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e98f4c1484d284489d67bfeeb0263fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 3
+  magnitude: 0.1
+  direction: {x: 0, y: 1, z: 0}
