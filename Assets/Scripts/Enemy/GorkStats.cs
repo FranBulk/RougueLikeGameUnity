@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class EnemyStats : MonoBehaviour
+public class GorkStats : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
     //Las stats del momento del juego, las que varian
@@ -16,8 +16,8 @@ public class EnemyStats : MonoBehaviour
 
     public float despawnDistance = 20f;
     public AudioClip hitmarket;
-    Transform player;
     public Image healthBar;
+    Transform player;
     void Awake()
     {
         currentMovespeed = enemyData.MoveSpeed;
@@ -46,6 +46,7 @@ public class EnemyStats : MonoBehaviour
         {
             Kill();
         }
+
         UpdateHealthBar();
     }
     public void Kill()
@@ -74,6 +75,7 @@ public class EnemyStats : MonoBehaviour
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
         transform.position = player.position + es.relativeSpawnpoints[Random.Range(0, es.relativeSpawnpoints.Count)].position;
     }
+
     void UpdateHealthBar()
     {
         healthBar.fillAmount = currentHealth / enemyData.Maxhealth;
