@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    //Mantenlo
     [Header ("Weapon Stats")]
     public WeaponScriptableObject weaponData; //Para relacionar nuestras estats de las armas y sus características
     float currentCooldown; //El cooldown actual de nuestra arma

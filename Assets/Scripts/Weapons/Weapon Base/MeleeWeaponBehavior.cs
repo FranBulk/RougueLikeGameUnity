@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MeleeWeaponBehavior : MonoBehaviour
 {
+    //Mantenlo
     public WeaponScriptableObject weaponData;
     public float destroyAfterSeconds; //La duración del arma
     //Los stats que están en el momento

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GarlicBehavior : MeleeWeaponBehavior
 {
+    //Mantenlo
     List<GameObject> markedEnemies; //Para que el ajo solo actúe una vez por enemigo
     protected override void Start()
     {

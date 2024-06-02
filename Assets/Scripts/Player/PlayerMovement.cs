@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 moveDir; //Es el vector de movimiento del personaje
     [HideInInspector]
     public Vector2 lastMovedVector; //Es el último movimiento del personaje
+    [HideInInspector]
+    public Vector2 lastMovedVectorY;
 
     //Referencias
     Rigidbody2D rb; //Es el componente para encontrar a nuestro personaje
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<PlayerStats>();
         rb=GetComponent<Rigidbody2D>(); //Obtiene el rigidbody de el personaje, y lo guarda en nuestra variable
         lastMovedVector = new Vector2(1, 0f); //Si no se mueve
+        lastMovedVectorY = new Vector2(0f, 1);
     }
 
     void Update()
@@ -48,15 +51,18 @@ public class PlayerMovement : MonoBehaviour
         {
             lastHorizontalVector = moveDir.x; //Para que se quede guardado la orientación
             lastMovedVector = new Vector2(lastHorizontalVector, 0f); //Última vez que se movió en x
+            lastMovedVectorY = new Vector2(0f, lastVerticalVector);
         }
         if (moveDir.y != 0)
         {
             lastVerticalVector = moveDir.y; //Para que se quede guardado la orientación
             lastMovedVector = new Vector2(0f, lastVerticalVector); //Última vez que se movió en y
+            lastMovedVectorY = new Vector2(0f, lastVerticalVector);
         }
         if(moveDir.x != 0 && moveDir.y != 0)
         {
             lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector); //Mientras hay movimiento
+            lastMovedVectorY = new Vector2(0f, lastVerticalVector);
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KnifeController : WeaponController //Así accede a nuestra función de armas, donde están todas las armas y sus características
 {
-    // Start is called before the first frame update
+    //Guardalo
     protected override void Start()
     {
         base.Start();

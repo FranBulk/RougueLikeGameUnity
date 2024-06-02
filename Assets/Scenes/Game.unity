@@ -5656,6 +5656,7 @@ MonoBehaviour:
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}
   lastMovedVector: {x: 0, y: 0}
+  lastMovedVectorY: {x: 0, y: 0}
 --- !u!114 &922770700
 MonoBehaviour:
   m_ObjectHideFlags: 0
