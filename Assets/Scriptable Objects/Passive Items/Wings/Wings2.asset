@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac338990694c9743974d1beb1eedc0e, type: 3}
   m_Name: Wings2
   m_EditorClassIdentifier: 
-  multiplier: 25
+  multiplier: 75
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 4097394317779665047, guid: e90d53d93853f324ebb5b65b847a3c29, type: 3}
   icon: {fileID: 1912214109, guid: f7d2153b702e8774f8b63e27c40c68f6, type: 3}
-  name: Alas Nvl2
+  name: Alas Nvl 2
   description: Aumentan mas tu velocidad

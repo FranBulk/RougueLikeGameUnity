@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
    //Las regiones son para poder acoplar partes del código
    #region Current Stats Properties
 
-   float CurrentHealth
+   public float CurrentHealth
    {
       get {return currentHealth;}
       set

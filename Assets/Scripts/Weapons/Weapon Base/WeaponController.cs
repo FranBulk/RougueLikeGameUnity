@@ -44,4 +44,3 @@ public class WeaponController : MonoBehaviour
         currentCooldown = weaponData.CooldownDuration; //Ya que atacó, se reinica el cooldown y así entramos en el loop
     }
 }
-//Al rato lo cambio

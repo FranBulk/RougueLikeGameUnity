@@ -5801,6 +5801,18 @@ MonoBehaviour:
   - passiveItemUpgradeIndex: 1
     initialPassiveItem: {fileID: 4097394317779665047, guid: 9412250bb471b1f48b1f13bd4fa50986, type: 3}
     passiveItemData: {fileID: 11400000, guid: f1f70bd2a59020d46923f99bd907cde4, type: 2}
+  - passiveItemUpgradeIndex: 2
+    initialPassiveItem: {fileID: 5992672380588940360, guid: c5956adcd5fb4ee44a63eccf0032456b, type: 3}
+    passiveItemData: {fileID: 11400000, guid: c6f535804f85499469bb46f5d3ededfc, type: 2}
+  - passiveItemUpgradeIndex: 3
+    initialPassiveItem: {fileID: 5900631084627917881, guid: 0b9262a12e6ce5a4facba89f310d46fe, type: 3}
+    passiveItemData: {fileID: 11400000, guid: e69b1eb86cf50ac419227ce2f7bd9702, type: 2}
+  - passiveItemUpgradeIndex: 4
+    initialPassiveItem: {fileID: 8261364859343006292, guid: 59aa6a1e165700e46a79c064c5185d9f, type: 3}
+    passiveItemData: {fileID: 11400000, guid: 33eba574d11c0bf41b20a04698783cab, type: 2}
+  - passiveItemUpgradeIndex: 5
+    initialPassiveItem: {fileID: 7698150394207466624, guid: 019d254daa6e4bd4e92c766c6d096ced, type: 3}
+    passiveItemData: {fileID: 11400000, guid: 2946593f1b488494ca263517c380f8d0, type: 2}
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 597817936}
     upgradeDescriptionDisplay: {fileID: 535892127}

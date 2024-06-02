@@ -81,16 +81,16 @@ public class ProjectileWeaponBehavior : MonoBehaviour
         //Referenciamos el script a traves del colider y usamos la función que está en el de enemigo
         if (col.CompareTag("Enemy"))
         {
+            ReducePierce(); //Si impacta con un enemigo, el pierce se activará
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(GetCurrentDamage());
-            ReducePierce(); //Si impacta con un enemigo, el pierce se activará
         }
         else if (col.CompareTag("Prop"))
         {
             if(col.gameObject.TryGetComponent(out BreakableProps breakable))
             {
+                ReducePierce(); //Si impacta con un enemigo, el pierce se activará
                 breakable.TakeDamage(GetCurrentDamage());
-                ReducePierce();
             }
         }
     }

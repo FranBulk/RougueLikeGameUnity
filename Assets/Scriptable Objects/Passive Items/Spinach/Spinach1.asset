@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac338990694c9743974d1beb1eedc0e, type: 3}
   m_Name: Spinach1
   m_EditorClassIdentifier: 
-  multiplier: 100
+  multiplier: 25
   level: 1
   nextLevelPrefab: {fileID: 7743012907721878287, guid: afef9381d088d4e49bf09d8cd6308b42, type: 3}
   icon: {fileID: -1035102223, guid: 88e7f0575a7874a498d9b1d1ea2fc3bd, type: 3}
