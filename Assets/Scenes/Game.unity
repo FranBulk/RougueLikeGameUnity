@@ -3016,6 +3016,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3103,6 +3104,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 922770696}
   offset: {x: 0, y: 0, z: -10}
+--- !u!82 &519420034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1cd4ceff90f74c5468eb083aefc49bbc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.098
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &527569700
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,7 +4513,7 @@ MonoBehaviour:
   - waveName: Normal Bats
     enemyGroups:
     - enemyName: Bats
-      enemyCount: 40
+      enemyCount: 100
       spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: 6bd2bce7d3d23f542bd2490a125d3d91, type: 3}
     waveQuota: 0
@@ -4425,11 +4522,11 @@ MonoBehaviour:
   - waveName: Normal and Red Bats
     enemyGroups:
     - enemyName: Bats
-      enemyCount: 30
+      enemyCount: 90
       spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: 6bd2bce7d3d23f542bd2490a125d3d91, type: 3}
     - enemyName: Red Bats
-      enemyCount: 20
+      enemyCount: 60
       spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: c883236fd059c4a45b8d8dd534895fec, type: 3}
     waveQuota: 0
@@ -4438,7 +4535,7 @@ MonoBehaviour:
   - waveName: Red Bats
     enemyGroups:
     - enemyName: Red Bats
-      enemyCount: 40
+      enemyCount: 80
       spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: c883236fd059c4a45b8d8dd534895fec, type: 3}
     waveQuota: 0
@@ -4447,11 +4544,11 @@ MonoBehaviour:
   - waveName: Red Bats and Ducks
     enemyGroups:
     - enemyName: Red Bats
-      enemyCount: 30
+      enemyCount: 70
       spawnCount: 0
       enemyPrefab: {fileID: 8254061482721705618, guid: c883236fd059c4a45b8d8dd534895fec, type: 3}
     - enemyName: Ducks
-      enemyCount: 30
+      enemyCount: 70
       spawnCount: 0
       enemyPrefab: {fileID: 7039319554487549632, guid: 8c98da5a27cca0040a314b2130d6be09, type: 3}
     waveQuota: 0
@@ -4460,7 +4557,7 @@ MonoBehaviour:
   - waveName: Ducks
     enemyGroups:
     - enemyName: Ducks
-      enemyCount: 40
+      enemyCount: 100
       spawnCount: 0
       enemyPrefab: {fileID: 7039319554487549632, guid: 8c98da5a27cca0040a314b2130d6be09, type: 3}
     waveQuota: 0
@@ -4469,11 +4566,11 @@ MonoBehaviour:
   - waveName: Ducks and Deer
     enemyGroups:
     - enemyName: Ducks
-      enemyCount: 40
+      enemyCount: 60
       spawnCount: 0
       enemyPrefab: {fileID: 7039319554487549632, guid: 8c98da5a27cca0040a314b2130d6be09, type: 3}
     - enemyName: Deer
-      enemyCount: 20
+      enemyCount: 60
       spawnCount: 0
       enemyPrefab: {fileID: 1518497730083706323, guid: 9f180ffdd33eaa14ea7ee40264adbf9a, type: 3}
     waveQuota: 0
@@ -4482,7 +4579,7 @@ MonoBehaviour:
   - waveName: Deer
     enemyGroups:
     - enemyName: Deer
-      enemyCount: 25
+      enemyCount: 70
       spawnCount: 0
       enemyPrefab: {fileID: 1518497730083706323, guid: 9f180ffdd33eaa14ea7ee40264adbf9a, type: 3}
     waveQuota: 0
@@ -4491,11 +4588,11 @@ MonoBehaviour:
   - waveName: Deer and Wolf
     enemyGroups:
     - enemyName: Deer
-      enemyCount: 20
+      enemyCount: 40
       spawnCount: 0
       enemyPrefab: {fileID: 1518497730083706323, guid: 9f180ffdd33eaa14ea7ee40264adbf9a, type: 3}
     - enemyName: Wolf
-      enemyCount: 18
+      enemyCount: 50
       spawnCount: 0
       enemyPrefab: {fileID: 5019450841400592618, guid: 07408156326c364469153704be669e4e, type: 3}
     waveQuota: 0
@@ -4504,7 +4601,7 @@ MonoBehaviour:
   - waveName: Wolf
     enemyGroups:
     - enemyName: Wolf
-      enemyCount: 25
+      enemyCount: 70
       spawnCount: 0
       enemyPrefab: {fileID: 5019450841400592618, guid: 07408156326c364469153704be669e4e, type: 3}
     waveQuota: 0
@@ -4517,26 +4614,17 @@ MonoBehaviour:
       spawnCount: 0
       enemyPrefab: {fileID: 948939297124740260, guid: 7720e07393f36324fb188de1d89911f1, type: 3}
     - enemyName: Mini Gorks
-      enemyCount: 100
+      enemyCount: 200
       spawnCount: 0
       enemyPrefab: {fileID: 776578470477751794, guid: da296afcf3118414ab74958a482e1eaa, type: 3}
     waveQuota: 0
-    spawnInterval: 0.25
-    spawnCount: 0
-  - waveName: Gorks
-    enemyGroups:
-    - enemyName: Gork
-      enemyCount: 20
-      spawnCount: 0
-      enemyPrefab: {fileID: 948939297124740260, guid: 7720e07393f36324fb188de1d89911f1, type: 3}
-    waveQuota: 0
-    spawnInterval: 0.1
+    spawnInterval: 0.4
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
   maxEnemiesAllowed: 12
   maxEnemiesReached: 0
-  waveInterval: 11
+  waveInterval: 10
   relativeSpawnpoints:
   - {fileID: 631657157}
   - {fileID: 791900507}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LittleGork
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  maxhealth: 120
+  maxhealth: 80
   damage: 30

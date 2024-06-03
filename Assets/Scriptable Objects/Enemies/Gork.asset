@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Gork
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  maxhealth: 10000
+  maxhealth: 100000
   damage: 100

@@ -7,6 +7,7 @@ public class SpinachPassiveItem : PassiveItem
     protected override void ApplyModifier()
     {
         player.CurrentMight *= 1 + passiveItemData.Multiplier / 100f;
+        GameManager.instance.currentMightDisplay.text = "Poder: " + player.CurrentMight.ToString("F2");
     }
     //Guardalo
 }

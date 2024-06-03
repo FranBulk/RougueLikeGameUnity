@@ -171,7 +171,6 @@ public class PlayerStats : MonoBehaviour
 
    void Start()
    {
-      //No lo quites
       experienceCap = levelRanges[0].experienceCapIncrease; //Porque en cuanto empieza el juego sube de nivel el jugador
       GameManager.instance.currentHealthDisplay.text = "Vida: " + CurrentHealth.ToString("F2");
       GameManager.instance.currentrecoveryDisplay.text = "Recuperación: " + CurrentRecovery.ToString("F2");
@@ -189,6 +188,7 @@ public class PlayerStats : MonoBehaviour
 
    void Update() 
    {
+      Recover();
       if(invincibilityTimer > 0)
       {
          invincibilityTimer -= Time.deltaTime;
@@ -198,8 +198,6 @@ public class PlayerStats : MonoBehaviour
       {
          isInvincible = false;
       }
-
-      Recover();
    }
 
    public void IncreaseExperience(int amount)

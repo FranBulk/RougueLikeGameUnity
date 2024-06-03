@@ -101,7 +101,8 @@ public class GameManager : MonoBehaviour
             default:
             Debug.LogWarning("El estado del juego no se encuentra o no existe");
                 break;
-        }        
+        }
+        //Guardalo  
     }
 
     public void ChangeState(GameState newState)
