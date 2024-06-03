@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac338990694c9743974d1beb1eedc0e, type: 3}
   m_Name: RedGem3
   m_EditorClassIdentifier: 
-  multiplier: 200
+  multiplier: 400
   level: 3
   nextLevelPrefab: {fileID: 5992672380588940360, guid: 2ded2bf208f5b1744b406abf3bb93017, type: 3}
   icon: {fileID: 575534279, guid: 4c0bfbaaed1009a479e60e33200c52e1, type: 3}

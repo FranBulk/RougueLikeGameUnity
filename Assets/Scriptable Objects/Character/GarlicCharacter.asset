@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GarlicCharacter
   m_EditorClassIdentifier: 
   icon: {fileID: 793888380, guid: 18e953a7170c36e499d1337f3fbdad97, type: 3}
-  name: Garlic Character
+  name: CampodeFuerza
   startingWeapon: {fileID: 8795636666019803511, guid: bae45a0db2196704ab272e45bc5b3b04, type: 3}
   maxHealth: 250
   recovery: 2

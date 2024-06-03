@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0869eb40e0ec4faf8bbfb5cf21c37, type: 3}
   m_Name: GorkBullet
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 10
   maxhealth: 1
-  damage: 30
+  damage: 50

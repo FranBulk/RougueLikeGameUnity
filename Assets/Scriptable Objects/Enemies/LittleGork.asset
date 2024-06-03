@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0869eb40e0ec4faf8bbfb5cf21c37, type: 3}
   m_Name: LittleGork
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  maxhealth: 100
-  damage: 15
+  moveSpeed: 6
+  maxhealth: 120
+  damage: 30
