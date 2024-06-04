@@ -661,8 +661,8 @@ RectTransform:
   m_Children:
   - {fileID: 1666971705}
   - {fileID: 513830356}
-  - {fileID: 1075577654}
   - {fileID: 1780556595}
+  - {fileID: 1075577654}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -857,7 +857,7 @@ RectTransform:
   - {fileID: 1985276264}
   - {fileID: 1270753695}
   m_Father: {fileID: 773626881}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2011,7 +2011,7 @@ RectTransform:
   - {fileID: 1383507725}
   - {fileID: 717477104}
   m_Father: {fileID: 773626881}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2175,7 +2175,7 @@ MonoBehaviour:
     que intentar\xE1n acabar contigo. \nCuando acabes con un enemigo, este tendr\xE1
     una posibilidad de soltar una gema azul, esta subir\xE1 tu nivel.\nCuando subas
     de nivel, se te dar\xE1n 4 opciones para mejorar a tu personaje. Sobrevive hasta
-    el l\xEDmite del tiempo, que son 5 minutos.\nConsejo: Puedes destruir algunas
+    el l\xEDmite del tiempo, que son 3 minutos.\nConsejo: Puedes destruir algunas
     cosas del mapa, tendr\xE1n algo para ayudarte a sobrevivir."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

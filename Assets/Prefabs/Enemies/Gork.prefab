@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CooldownGork: 5
-  timeUntilGorkShoot: 10
+  timeUntilGorkShoot: 7
   bulletSpawner: {fileID: 1110279085366535973}
   BulletSpawnSound: {fileID: 8300000, guid: 96bb1d743b9a57a4d8e4db98276b026f, type: 3}
 --- !u!114 &-3208781204166733950
